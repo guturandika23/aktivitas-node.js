@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ judulHalaman }}</title>
+</head>
+<body>
+    <h1>TRACKING JNT</h1>
+    <form action="/tambahbarang" method="POST">
+    <input type="text" name="inputnamabarang" placeholder="Nama Barag">
+    <input type="text" name="inputalamatasal" placeholder="Alamat Asal">
+    <input type="text" name="inputalamattujuan" placeholder="Alamat Tujuan">
+    <input type="text" name="inputnoresi" placeholder="No Resi">
+    <button type="submit">TAMBAH</button>
+    </form>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAMA BARANG</th>
+                <th>NO RESI</th>
+                <th>ALAMAT ASAL</th>
+                <th>ALAMAT TUJUAN</th>
+            </tr>
+        </thead>
+    <tbody>
+        {{#each data}}
+            <tr>
+                <td>{{ id_tracking }}</td>
+                <td>{{ nama_barang }}</td>
+                <td>{{ no_resi }}</td>
+                <td>{{ alamat_asal }}</td>
+                <td>{{ alamat_tujuan }}</td>
+            </tr>
+            {{/each}}
+        </tr>
+    </tbody>
+    </table>
+
+</body>
+</html>
